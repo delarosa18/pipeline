@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    environment {
+        INSTAGRAMUSER= "@delarosa.18"
+    }
+    stages {
+        stage ("Saludo 1") {
+            steps {
+                echo "Hola desde Saludo 1"
+            }
+        }
+        stage ("Saludos 3") {
+            steps {
+                echo "Para que puedas buscarme, una vez culmines el curso, mi user es $INSTAGRAMUSER"
+                echo "Este es el build numero: $BUILD_NUMBER"
+                sh "echo $INSTAGRAMUSER" 
+            }
+        }
+    }   
+}
