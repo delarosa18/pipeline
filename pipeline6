@@ -17,7 +17,7 @@ pipeline {
         }
         stage ("Saludos 3") {
             steps {
-                echo "Para que puedas buscarme en IG, una vez culmines el curso, mi user es $INSTAGRAMUSER"
+                echo "Para que puedas buscarme, una vez culmines el curso, mi user es $INSTAGRAMUSER"
                 echo "Este es el build numero: $BUILD_NUMBER"
                 sh "echo $INSTAGRAMUSER" 
             }
